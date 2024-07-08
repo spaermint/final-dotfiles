@@ -1,0 +1,71 @@
+/* -----------------------------------------------------
+ * General 
+ * ----------------------------------------------------- */
+* {
+    font-size: 13px;
+    font-family: Play;
+    font-weight: bold;
+    font-style: normal;
+    min-height: 0;
+}
+
+window#waybar {
+	background-color: #152528;
+}
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+#workspaces {
+	background: transparent;
+	margin: 0px 0px;
+	padding: 0px 0px;
+}
+
+#workspaces button {
+	color: #fda47f;
+	background-color: transparent;
+	padding: 0px 0px;
+	margin: 4px 2px;
+}
+
+#workspaces button.active {
+    color: #152528;
+	padding: 0px 0px;
+	margin: 4px 2px;
+	background-color: #fda47f;
+    border-radius: 3px;
+}
+
+
+/* -----------------------------------------------------
+ * Window
+ * ----------------------------------------------------- */
+
+#pulseaudio{
+    color: #fda47f;
+	background-color: transparent;
+	margin: 5px;
+	padding: 2px 10px;
+}
+
+#clock{
+    color: #fda47f;
+	background-color: transparent;
+	margin: 5px;
+	padding: 2px 10px;
+}
+
+#battery {
+    color: #fda47f;
+	background-color: transparent;
+	margin: 5px;
+	padding: 2px 10px;
+}
+
+#network {
+    color: #fda47f;
+	background-color: transparent;
+	margin: 5px;
+	padding: 2px 10px;
+}

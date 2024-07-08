@@ -1,0 +1,102 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+        "battery",
+        "pulseaudio",
+        "network",
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "clock"
+    ],
+    //"hyprland/workspaces": {
+    //	"format": "{icon}",
+    //	"format-icons": {
+    //		"default": " ",
+    //		"active": " ",
+    //		"urgent": " "
+    //			/* "default": "", */
+    //			/* "active": "", */
+    //			/* "urgent": "" */
+    //	},
+    //	"on-scroll-up": "hyprctl dispatch workspace e+1",
+    //	"on-scroll-down": "hyprctl dispatch workspace e-1",
+    //},
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十",
+        }
+    },
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "tooltip-format": "<tt><span font='Noto Sans Mono Regular'>{calendar}</span></tt>",
+        "calendar": {
+            "mode"          : "year",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "on-click-right": "mode",
+            "format": {
+                "months":     "<span color='#fda47f'><b>{}</b></span>",
+                "days":       "<span color='#156064'><b>{}</b></span>",
+                "weeks":      "<span color='#248277'><b>W{}</b></span>",
+                "weekdays":   "<span color='#248277'><b>{}</b></span>",
+                "today":      "<span color='#fda47f'><b>{}</b></span>"
+            }
+        },
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}",
+        "format-charging": "󱘖  {capacity}",
+        "format-plugged": "󱘖  {capacity}",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip": false
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}   {volume}          {format_source}",
+        "format-muted": "      {format_source}",
+        "format-source": " {volume}",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+    },
+    "network": {
+        "interface": "wlan0",
+        "format": "{ifname}",
+        "format-wifi": "    {signalStrength}",
+        "format-disconnected": "  Disconnected",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    }
+}
+
